@@ -11,198 +11,75 @@ let caughtFishCount = 0;
 for (let i = 6; i<12; i++){
     if (i === 6){
         console.log(`The time is ${i}:00am. So far you've caught: ${caughtFish.length} fish, ${getTotalWeight()} lbs, $${getTotalValue()}\n`);
-        
-            caughtFish.push(generateRandomFish());
-        
-                console.log(`You caught a ${caughtFish[caughtFishCount].name} weighing ${caughtFish     [caughtFishCount].weight} lbs and valued at $${caughtFish[caughtFishCount].value}\n`);
-                    caughtFishCount++;
+            yourCatch();
 
-        console.log(`Your action: [c]atch or [r]elease?`)
+        console.log(`Your action: [c]atch or [r]elease?`);
             let decision = prompt(`> `);
                 while (decision !== 'c' && decision !=='r'){
-                    console.log(`Please select [c] or [r]`)
+                    console.log(`Please select [c] or [r]`);
                         decision = prompt(`> `);
                 }
         if(decision === "c"){
             console.log(`\nYou chose to keep the fish.`);
             
-            } else if (decision === "r"){
+        } else if (decision === "r"){
                 console.log(`\nYou chose to release the fish.`);
                     caughtFish.pop();
                      caughtFishCount--;
-           
-            } 
-        console.log(`\n==============================================================================\n`)
-
-
-       
+        } 
+        console.log(`\n==============================================================================\n`);
+   
     } else if (i === 7){
         console.log(`The time is ${i}:00am. So far you've caught: ${caughtFish.length} fish, ${getTotalWeight()} lbs, $${getTotalValue()}\n`);
+            yourCatch();
 
-            caughtFish.push(generateRandomFish());
-                console.log(`You caught a ${caughtFish[caughtFishCount].name} weighing ${caughtFish[caughtFishCount].weight} lbs and valued at $${caughtFish[caughtFishCount].value}\n`);
-                    caughtFishCount++;
-
-        
-        console.log(`Your action: [c]atch or [r]elease?`)
+        console.log(`Your action: [c]atch or [r]elease?`);
             decision = prompt(`> `);
                 while (decision !== 'c' && decision !=='r'){
-                  console.log(`Please select [c] or [r]`)
+                  console.log(`Please select [c] or [r]`);
                       decision = prompt(`> `);
                 }
         if(decision === "c"){
             console.log(`\nYou chose to keep the fish.`);
-        } else if (decision === "r"){
+        }else if (decision === "r"){
             console.log(`\nYou chose to release the fish.`);
                 caughtFish.pop();
                     caughtFishCount--;
         }
-        
-        
-        console.log(`\n==============================================================================\n`)
+         console.log(`\n==============================================================================\n`);
 
     } else if (i === 8){
         console.log(`The time is ${i}:00am. So far you've caught: ${caughtFish.length} fish, ${getTotalWeight()} lbs, $${getTotalValue()}\n`);
+            yourCatch();
+                weightCheck();
+        console.log(`\n==============================================================================\n`);
 
-            caughtFish.push(generateRandomFish());
-                console.log(`You caught a ${caughtFish[caughtFishCount].name} weighing ${caughtFish[caughtFishCount].weight} lbs and valued at $${caughtFish[caughtFishCount].value}\n`);
-                    caughtFishCount++;
-
-        if(getTotalWeight()<10){
-            console.log(`Your action: [c]atch or [r]elease?`)
-                decision = prompt(`> `);
-            
-            while (decision !== 'c' && decision !=='r'){
-                console.log(`Please select [c] or [r]`)
-                    decision = prompt(`> `);
-            }
-        
-            if(decision === "c"){
-                console.log(`\nYou chose to keep the fish.`);
-            } else if (decision === "r"){
-                console.log(`\nYou chose to release the fish.`);
-                    caughtFish.pop();
-                        caughtFishCount--;
-            }
-        }
-        
-        if(getTotalWeight() > 10){
-            console.log(`This fish would put you over 10 lbs, so you release it.`)
-                prompt(`Press [enter] to continue.`)
-                    caughtFish.pop();
-                        caughtFishCount--;
-        } 
-        console.log(`\n==============================================================================\n`)
-
-
-        
-    
-    
-    
     } else if (i === 9){
         console.log(`The time is ${i}:00am. So far you've caught: ${caughtFish.length} fish, ${getTotalWeight()} lbs, $${getTotalValue()}\n`);
-
-            caughtFish.push(generateRandomFish());
-                console.log(`You caught a ${caughtFish[caughtFishCount].name} weighing ${caughtFish[caughtFishCount].weight} lbs and valued at $${caughtFish[caughtFishCount].value}\n`);
-                    caughtFishCount++;
-
-        if(getTotalWeight()<10){
-            console.log(`Your action: [c]atch or [r]elease?`)
-                decision = prompt(`> `);
-                    while (decision !== 'c' && decision !=='r'){
-                        console.log(`Please select [c] or [r]`)
-                            decision = prompt(`> `);
-                    }
-            if(decision === "c"){
-                console.log(`\nYou chose to keep the fish.`);
-                
-            } else if (decision === "r"){
-                console.log(`\nYou chose to release the fish.`);
-                    caughtFish.pop();
-                        caughtFishCount--;
-            }
-        }
-        
-        if (getTotalWeight()>10){
-            console.log(`This fish would put you over 10 lbs, so you release it.`)
-                prompt(`Press [enter] to continue.`)
-                    caughtFish.pop();
-                        caughtFishCount--;
-        } 
-        console.log(`\n==============================================================================\n`)
+            yourCatch();
+                weightCheck();
+        console.log(`\n==============================================================================\n`);
 
     } else if (i === 10){
         console.log(`The time is ${i}:00am. So far you've caught: ${caughtFish.length} fish, ${getTotalWeight()} lbs, $${getTotalValue()}\n`);
-
-            caughtFish.push(generateRandomFish());
-                console.log(`You caught a ${caughtFish[caughtFishCount].name} weighing ${caughtFish[caughtFishCount].weight} lbs and valued at $${caughtFish[caughtFishCount].value}\n`);
-                    caughtFishCount++;
-
-        if(getTotalWeight()<10){
-            console.log(`Your action: [c]atch or [r]elease?`)
-                decision = prompt(`> `);
-                    while (decision !== 'c' && decision !=='r'){
-                        console.log(`Please select [c] or [r]`)
-                            decision = prompt(`> `);
-                    }
-            if(decision === "c"){
-                console.log(`\nYou chose to keep the fish.`);
-                
-            } else if (decision === "r"){
-                console.log(`\nYou chose to release the fish.`);
-                    caughtFish.pop();
-                        caughtFishCount--;
-            }
-        }
-        
-        if (getTotalWeight()>10){
-            console.log(`This fish would put you over 10 lbs, so you release it.`)
-                prompt(`Press [enter] to continue.`)
-                    caughtFish.pop();
-                        caughtFishCount--;
-        } 
-        console.log(`\n==============================================================================\n`)
+            yourCatch();
+                weightCheck();
+        console.log(`\n==============================================================================\n`);
 
     } else if (i === 11){
         console.log(`The time is ${i}:00am. So far you've caught: ${caughtFish.length} fish, ${getTotalWeight()} lbs, $${getTotalValue()}\n`);
-
-            caughtFish.push(generateRandomFish());
-                console.log(`You caught a ${caughtFish[caughtFishCount].name} weighing ${caughtFish[caughtFishCount].weight} lbs and valued at $${caughtFish[caughtFishCount].value}\n`);
-                    caughtFishCount++;
-
-        if(getTotalWeight()<10){
-            console.log(`Your action: [c]atch or [r]elease?`)
-                decision = prompt(`> `);
-                    while (decision !== 'c' && decision !=='r'){
-                        console.log(`Please select [c] or [r]`)
-                            decision = prompt(`> `);
-                    }
-            if(decision === "c"){
-                console.log(`\nYou chose to keep the fish.`);
-                
-            } else if (decision === "r"){
-                console.log(`\nYou chose to release the fish.`);
-                    caughtFish.pop();
-                        caughtFishCount--;
-            }
-        }
-        
-        if (getTotalWeight()>10){
-            console.log(`This fish would put you over 10 lbs, so you release it.`)
-                prompt(`Press [enter] to continue.`)
-                    caughtFish.pop();
-                        caughtFishCount--;
-        } 
-        console.log(`\n==============================================================================\n`)
+            yourCatch();
+                weightCheck();
+        console.log(`\n==============================================================================\n`);
         
         console.log(`The time is 12:00pm. Times up!\n`)
             console.log(`You caught ${caughtFish.length} fish: `)
                 for (let i = 0; i<caughtFish.length; i++){
-                    console.log(`*${caughtFish[i].name}, ${caughtFish[i].weight} lbs, $${caughtFish[i].value}`);
+                    console.log(`*${caughtFish[i].name}, ${caughtFish[i].weight} lbs, $${caughtFish [i].value}`);
                 }
 
-                    console.log(`\nTotal weight: ${getTotalWeight()} lbs`);
-                        console.log(`Total value: $${getTotalValue()}`);
+                console.log(`\nTotal weight: ${getTotalWeight()} lbs`);
+        console.log(`Total value: $${getTotalValue()}`);
 
     }
 }
@@ -262,6 +139,37 @@ function getTotalValue(){
     }
     return Number(totalValue.toPrecision(3));
 
+}
+function weightCheck(){
+    if(getTotalWeight()<10){
+        console.log(`Your action: [c]atch or [r]elease?`)
+            decision = prompt(`> `);
+                while (decision !== 'c' && decision !=='r'){
+                    console.log(`Please select [c] or [r]`)
+                        decision = prompt(`> `);
+                }
+        if(decision === "c"){
+            console.log(`\nYou chose to keep the fish.`);
+            
+        } else if (decision === "r"){
+            console.log(`\nYou chose to release the fish.`);
+                caughtFish.pop();
+                    caughtFishCount--;
+        }
+    }
+    
+    if (getTotalWeight()>10){
+        console.log(`This fish would put you over 10 lbs, so you release it.`)
+            prompt(`Press [enter] to continue.`)
+                caughtFish.pop();
+                    caughtFishCount--;
+    } 
+}
+function yourCatch(){
+    caughtFish.push(generateRandomFish());
+        
+        console.log(`You caught a ${caughtFish[caughtFishCount].name} weighing ${caughtFish     [caughtFishCount].weight} lbs and valued at $${caughtFish[caughtFishCount].value}\n`);
+            caughtFishCount++;
 }
 
 
